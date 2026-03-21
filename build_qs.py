@@ -35,7 +35,7 @@ MAIN_CONTENT = """
                         </h1>
                         <p class="hero-desc" style="max-width: 700px; font-size: 1.05rem;">
                             Unfold は、コードを一気に説明するAIではなく、<strong>「全体像 → 構造 → 詳細」の順で迷わず読むための学習ツール</strong>です。<br>
-                            このページでは、インストールから最初のコード解説を体験するまでの最短手順を案内します。
+                            このページでは、インストールから最初のコード解説を表示するところまでを案内します。
                         </p>
                     </div>
                 </div>
@@ -76,47 +76,51 @@ MAIN_CONTENT = """
                 <!-- Step 1 -->
                 <div style="margin-top: 3rem;">
                     <h3 style="color: var(--text-primary); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <span class="step-num" style="margin-bottom: 0;">1</span> 拡張機能のインストールと初期設定
+                        <span class="step-num" style="margin-bottom: 0;">1</span> 拡張機能をインストールする
                     </h3>
-                    <ol style="padding-left: 1.5rem; color: var(--text-body); line-height: 1.9; margin-bottom: 1.5rem;">
+                    <ol style="padding-left: 1.5rem; color: var(--text-body); line-height: 1.9;">
                         <li style="margin-bottom: 0.4rem;">VS Code に Unfold 拡張機能をインストールします。</li>
-                        <li style="margin-bottom: 0.4rem;">アクティビティバー（左側のメニュー）から <strong>Unfold</strong> のアイコンをクリックします。</li>
-                        <li style="margin-bottom: 0.4rem;">サイドバーの <strong>Settings（設定）</strong> ビューを開きます。</li>
-                        <li style="margin-bottom: 0.4rem;">使用するプロバイダー（例: Gemini, OpenRouter, Ollama）を選択し、<strong>APIキー</strong>（またはローカルURLとモデル名）を入力して保存します。</li>
                     </ol>
-                    <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 400px; padding: 0; background: transparent; border: 1px solid var(--border);">
-                        <img src="images/screenshot_setting.png" alt="設定画面のスクリーンショット" width="811" height="1028" style="width: 100%; height: auto; display: block; border-radius: 8px;">
-                    </div>
                 </div>
 
                 <!-- Step 2 -->
-                <div style="margin-top: 4.5rem;">
+                <div style="margin-top: 3.5rem;">
                     <h3 style="color: var(--text-primary); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <span class="step-num" style="margin-bottom: 0;">2</span> コードを解説してみる
+                        <span class="step-num" style="margin-bottom: 0;">2</span> プロバイダーとAPIキーを設定する
                     </h3>
                     <ol style="padding-left: 1.5rem; color: var(--text-body); line-height: 1.9; margin-bottom: 1.5rem;">
-                        <li style="margin-bottom: 0.4rem;">エディタで、<strong>解説したいコードファイルを開いた状態</strong>にします。</li>
-                        <li style="margin-bottom: 0.4rem;">Unfoldのサイドメニューを開き、<br>
-                        <strong style="color: var(--accent); background: var(--accent-muted); border: 1px solid rgba(62,175,247,0.2); padding: 0.2rem 0.6rem; border-radius: 6px; display: inline-block; margin-top: 0.4rem;">「解説を開始する」</strong> ボタンを押します。</li>
+                        <li style="margin-bottom: 0.4rem;">アクティビティバーから <strong>Unfold</strong> のアイコンをクリックし、<strong>Settings（設定）</strong> を開きます。</li>
+                        <li style="margin-bottom: 0.4rem;">使用するプロバイダーを選択し、<strong>APIキー</strong>を入力して保存します。</li>
                     </ol>
-                    <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 450px; padding: 0; background: transparent; border: 1px solid var(--border);">
-                        <img src="images/screenshot_start.png" alt="解説を開始するボタンのスクリーンショット" width="889" height="822" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 600px; padding: 0; background: transparent; border: 1px solid var(--border);">
+                        <img src="images/screenshot_setting.png" alt="設定画面のスクリーンショット" width="811" height="1028" style="width: 100%; height: auto; display: block; border-radius: 8px;">
                     </div>
                 </div>
 
                 <!-- Step 3 -->
                 <div style="margin-top: 4.5rem;">
                     <h3 style="color: var(--text-primary); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;">
-                        <span class="step-num" style="margin-bottom: 0;">3</span> ガイドに沿ってコードを読む
+                        <span class="step-num" style="margin-bottom: 0;">3</span> コードを解説してみる
+                    </h3>
+                    <ol style="padding-left: 1.5rem; color: var(--text-body); line-height: 1.9; margin-bottom: 1.5rem;">
+                        <li style="margin-bottom: 0.4rem;">エディタで、<strong>解説したいコードファイルを開いた状態</strong>にします。</li>
+                        <li style="margin-bottom: 0.4rem;">Unfoldのサイドメニューから、<strong style="color: var(--accent); background: var(--accent-muted); border: 1px solid rgba(62,175,247,0.2); padding: 0.2rem 0.6rem; border-radius: 6px; display: inline-block; margin: 0 0.4rem;">「解説を開始する」</strong> ボタンを押します。</li>
+                    </ol>
+                    <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 450px; padding: 0; background: transparent; border: 1px solid var(--border);">
+                        <img src="images/screenshot_start.png" alt="解説を開始するボタンのスクリーンショット" width="889" height="822" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div style="margin-top: 4.5rem;">
+                    <h3 style="color: var(--text-primary); font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem;">
+                        <span class="step-num" style="margin-bottom: 0;">4</span> ガイドに沿ってコードを読む
                     </h3>
                     <p style="color: var(--text-body); margin-bottom: 2rem; font-size: 0.95rem;">生成が完了すると、サイドバーに解説が表示されます。</p>
                     
                     <div style="margin-bottom: 3rem; background: var(--bg-card); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
-                        <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">1. 全体像をつかむ</h4>
-                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">まずはコード全体の概要が表示されます。</p>
-                        
-                        <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">2. 読み始めガイドを選ぶ</h4>
-                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">「どこから読めばいいか」が提案されるので、推奨されたブロックをクリックして詳細画面に進みます。</p>
+                        <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">まずは読み始めガイドを選ぶ</h4>
+                        <p style="color: var(--text-dim); margin-bottom: 1.5rem;">まずはコード全体の概要を確認し、「どこから読めばいいか」の提案から最初のブロックを選んでみてください。</p>
                         
                         <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 600px; padding: 0; background: transparent; border: 1px solid var(--border-light);">
                             <img src="images/screenshot3.png" alt="トップ画面のスクリーンショット" width="913" height="534" style="width: 100%; height: auto; display: block; border-radius: 8px;">
@@ -124,11 +128,10 @@ MAIN_CONTENT = """
                     </div>
 
                     <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
-                        <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">3. ドリルダウンで詳細を確認する</h4>
+                        <h4 style="color: var(--text-primary); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">ドリルダウンで詳細を確認</h4>
                         <p style="color: var(--text-dim); margin-bottom: 1.5rem; line-height: 1.8;">
-                            ブロック詳細画面では、その部分の詳しい解説が読めます。<br>
-                            処理が複雑な場合は、さらに内部のステップに分けて深掘り（ドリルダウン）することができます。<br>
-                            読み進めると、エディタ上の対象コードも連動して<strong>ハイライト</strong>されます。
+                            ブロック詳細画面では詳しい解説が読めます。<br>
+                            処理が複雑な場合は、さらに深掘り（ドリルダウン）してみましょう。エディタ上のコードも連動して<strong>ハイライト</strong>されます。
                         </p>
                         <div class="screenshot-frame" style="aspect-ratio: unset; max-width: 700px; padding: 0; background: transparent; border: 1px solid var(--border-light);">
                             <img src="images/screenshot2.png" alt="ブロック詳細画面のスクリーンショット" width="1398" height="865" style="width: 100%; height: auto; display: block; border-radius: 8px;">
